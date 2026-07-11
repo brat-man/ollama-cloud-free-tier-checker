@@ -23,7 +23,7 @@ It answers one question:
 
 ## Models
 <!-- MODELS_TABLE_START -->
-> Last checked: 2026-06-17 04:27 UTC
+> Last checked: 2026-07-11 04:43 UTC
 
 | Model | Free? | Usage |
 |---|:---:|:---:|
@@ -33,7 +33,8 @@ It answers one question:
 | [`gemma3:12b-cloud`](https://ollama.com/library/gemma3:12b-cloud) | ✅ | ▰▱▱▱ |
 | [`gemma3:27b-cloud`](https://ollama.com/library/gemma3:27b-cloud) | ✅ | ▰▰▱▱ |
 | [`gemma3:4b-cloud`](https://ollama.com/library/gemma3:4b-cloud) | ✅ | ▰▱▱▱ |
-| [`gemma4:31b-cloud`](https://ollama.com/library/gemma4:31b-cloud) | ✅ | ▰▱▱▱ |
+| [`gemma4:31b-cloud`](https://ollama.com/library/gemma4:31b-cloud) | ✅ | ▰▰▱▱ |
+| [`gemma4:cloud`](https://ollama.com/library/gemma4:cloud) | ✅ | ▰▰▱▱ |
 | [`glm-4.6:cloud`](https://ollama.com/library/glm-4.6:cloud) | ✅ | ▰▰▰▱ |
 | [`glm-4.7:cloud`](https://ollama.com/library/glm-4.7:cloud) | ✅ | ▰▰▰▱ |
 | [`gpt-oss:120b-cloud`](https://ollama.com/library/gpt-oss:120b-cloud) | ✅ | ▰▰▱▱ |
