@@ -31,6 +31,13 @@
     "discovered_from": [
       "public_cloud_library"
     ],
+    "model": "gemma4:cloud",
+    "usage": "medium"
+  },
+  {
+    "discovered_from": [
+      "public_cloud_library"
+    ],
     "model": "glm-4.7:cloud",
     "usage": "high"
   },
