@@ -37,6 +37,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      NODE_OPTIONS: --no-deprecation
       OLLAMA_API_KEY: ${{ secrets.OLLAMA_FREE_API_KEY }}
       INPUT_MODEL: ${{ inputs.model }}
       INPUT_MAX_MODELS: ${{ inputs.max_models }}
@@ -81,6 +82,7 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v6
         with:
+          token: ${{ secrets.GH_PAT }}
           branch: bot/update-free-model-status
           title: "Update Free-tier Ollama cloud model status"
           commit-message: "Update Free-tier Ollama cloud model status"
