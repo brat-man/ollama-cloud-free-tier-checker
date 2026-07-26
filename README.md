@@ -23,7 +23,7 @@ It answers one question:
 
 ## Models
 <!-- MODELS_TABLE_START -->
-> Last checked: 2026-07-25 22:52 UTC
+> Last checked: 2026-07-26 16:56 UTC
 
 | Model | Free? | Usage |
 |---|:---:|:---:|
@@ -71,7 +71,7 @@ It answers one question:
 | [`mistral-large-3:675b-cloud`](https://ollama.com/library/mistral-large-3:675b-cloud) | 🔒 | ▰▰▱▱ |
 | [`qwen3.5:397b-cloud`](https://ollama.com/library/qwen3.5:397b-cloud) | 🔒 | ▰▰▱▱ |
 | [`qwen3.5:cloud`](https://ollama.com/library/qwen3.5:cloud) | 🔒 | ▰▰▱▱ |
-| [`gemini-3-flash-preview:cloud`](https://ollama.com/library/gemini-3-flash-preview:cloud) | ⚠️ | ▰▰▰▰ |
+| [`gemini-3-flash-preview:cloud`](https://ollama.com/library/gemini-3-flash-preview:cloud) | 🚫 | ▰▰▰▰ |
 <!-- MODELS_TABLE_END -->
 
 ## Methodology
