@@ -23,11 +23,15 @@ MODELS_PATH = DATA_DIR / "models.json"
 HISTORY_PATH = DATA_DIR / "history.jsonl"
 
 CHAT_URL = "https://ollama.com/api/chat"
+MANIFEST_URL = "https://ollama.com/api/models/{model}/manifest"
 USER_AGENT = "ollama-free-cloud-models/0.1"
+
+MANIFEST_URL = "https://ollama.com/api/models/{model}/manifest"
 
 VALID_STATUSES = {
     "free",
     "requires_subscription",
+    "retired",
     "error",
 }
 
@@ -107,11 +111,38 @@ def extract_error_text(response: httpx.Response) -> str | None:
     return sanitize_excerpt(json.dumps(payload))
 
 
-def classify(http_status: int | None, error_text: str | None) -> str:
-    if http_status == 200:
-        return "free"
+def check_retired(client: httpx.Client, model: str) -> bool:
+    """Check if a model is retired by querying the library page."""
+    # The model name might have :cloud suffix, remove it for page check
+    model_name = model.replace(":cloud", "")
+    url = f"https://ollama.com/library/{model_name}"
+    try:
+        response = client.get(url, timeout=10)
+        if response.status_code == 200:
+            html = response.text.lower()
+            # Check for retired indicator in the HTML
+            if "retired" in html:
+                return True
+        elif response.status_code == 404:
+            # Model page not found could mean retired
+            pass
+    except (httpx.HTTPError, json.JSONDecodeError):
+        pass
+    return False
+
+
+def classify(http_status: int | None, error_text: str | None, is_retired: bool = False) -> str:
+    if is_retired:
+        return "retired"
 
     text = (error_text or "").lower()
+
+    # Check for retired in error message (from chat API)
+    if "retired" in text:
+        return "retired"
+
+    if http_status == 200:
+        return "free"
 
     if http_status == 403 and ("subscription" in text or "upgrade" in text or "requires" in text or "paid" in text):
         return "requires_subscription"
@@ -121,6 +152,9 @@ def classify(http_status: int | None, error_text: str | None) -> str:
 
 def probe_model(client: httpx.Client, model: str) -> dict[str, Any]:
     checked_at = utc_now()
+
+    # Check if model is retired
+    is_retired = check_retired(client, model)
 
     payload = {
         "model": model,
@@ -143,7 +177,7 @@ def probe_model(client: httpx.Client, model: str) -> dict[str, Any]:
 
         return {
             "model": model,
-            "status": "error",
+            "status": "retired" if is_retired else "error",
             "checked_at": checked_at,
             "http_status": None,
             "error_excerpt": error_excerpt,
@@ -153,7 +187,7 @@ def probe_model(client: httpx.Client, model: str) -> dict[str, Any]:
 
     return {
         "model": model,
-        "status": classify(response.status_code, error_excerpt),
+        "status": classify(response.status_code, error_excerpt, is_retired),
         "checked_at": checked_at,
         "http_status": response.status_code,
         "error_excerpt": error_excerpt,
@@ -187,6 +221,7 @@ def update_models(
         "checked_at": result["checked_at"],
         "http_status": result["http_status"],
         "error_excerpt": result["error_excerpt"],
+        "retired": result["status"] == "retired",
     }
 
     return list(by_model.values())
