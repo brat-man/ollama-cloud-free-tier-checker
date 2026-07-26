@@ -23,10 +23,8 @@ MODELS_PATH = DATA_DIR / "models.json"
 HISTORY_PATH = DATA_DIR / "history.jsonl"
 
 CHAT_URL = "https://ollama.com/api/chat"
-MANIFEST_URL = "https://ollama.com/api/models/{model}/manifest"
+TAGS_URL = "https://ollama.com/api/tags"
 USER_AGENT = "ollama-free-cloud-models/0.1"
-
-MANIFEST_URL = "https://ollama.com/api/models/{model}/manifest"
 
 VALID_STATUSES = {
     "free",
@@ -112,22 +110,33 @@ def extract_error_text(response: httpx.Response) -> str | None:
 
 
 def check_retired(client: httpx.Client, model: str) -> bool:
-    """Check if a model is retired by querying the library page."""
-    # The model name might have :cloud suffix, remove it for page check
+    """Check if a model is retired by querying the library page and tags API."""
+    # Check library page for "retired" text
     model_name = model.replace(":cloud", "")
     url = f"https://ollama.com/library/{model_name}"
     try:
         response = client.get(url, timeout=10)
         if response.status_code == 200:
             html = response.text.lower()
-            # Check for retired indicator in the HTML
             if "retired" in html:
                 return True
         elif response.status_code == 404:
-            # Model page not found could mean retired
             pass
     except (httpx.HTTPError, json.JSONDecodeError):
         pass
+
+    # Check if model exists in tags API (models available for pulling)
+    try:
+        response = client.get(TAGS_URL, timeout=10)
+        if response.status_code == 200:
+            payload = response.json()
+            model_names = {m.get("name") for m in payload.get("models", [])}
+            # Check both with and without :cloud suffix
+            if model_name not in model_names and f"{model_name}:cloud" not in model_names:
+                return True
+    except (httpx.HTTPError, json.JSONDecodeError):
+        pass
+
     return False
 
 
