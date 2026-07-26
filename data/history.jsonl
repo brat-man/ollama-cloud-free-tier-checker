@@ -305,3 +305,24 @@
 {"checked_at": "2026-07-26T16:56:22Z", "error_excerpt": null, "http_status": 200, "model": "nemotron-3-ultra:cloud", "status": "free"}
 {"checked_at": "2026-07-26T16:56:28Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "qwen3.5:397b-cloud", "status": "requires_subscription"}
 {"checked_at": "2026-07-26T16:56:31Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "qwen3.5:cloud", "status": "requires_subscription"}
+{"checked_at": "2026-07-26T21:30:24Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "deepseek-v4-flash:cloud", "status": "requires_subscription"}
+{"checked_at": "2026-07-26T21:30:28Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "deepseek-v4-pro:cloud", "status": "requires_subscription"}
+{"checked_at": "2026-07-26T21:30:31Z", "error_excerpt": "gemini-3-flash-preview was retired at 2026-07-15 00:00:00 -0700 PDT", "http_status": 410, "model": "gemini-3-flash-preview:cloud", "status": "retired"}
+{"checked_at": "2026-07-26T21:30:34Z", "error_excerpt": null, "http_status": 200, "model": "gemma4:31b-cloud", "status": "retired"}
+{"checked_at": "2026-07-26T21:30:38Z", "error_excerpt": null, "http_status": 200, "model": "gemma4:cloud", "status": "retired"}
+{"checked_at": "2026-07-26T21:30:41Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "glm-5.1:cloud", "status": "requires_subscription"}
+{"checked_at": "2026-07-26T21:30:45Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "glm-5.2:cloud", "status": "requires_subscription"}
+{"checked_at": "2026-07-26T21:30:48Z", "error_excerpt": null, "http_status": 200, "model": "gpt-oss:120b-cloud", "status": "retired"}
+{"checked_at": "2026-07-26T21:30:52Z", "error_excerpt": null, "http_status": 200, "model": "gpt-oss:20b-cloud", "status": "retired"}
+{"checked_at": "2026-07-26T21:30:55Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "kimi-k2.5:cloud", "status": "requires_subscription"}
+{"checked_at": "2026-07-26T21:30:59Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "kimi-k2.6:cloud", "status": "requires_subscription"}
+{"checked_at": "2026-07-26T21:31:02Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "kimi-k2.7-code:cloud", "status": "requires_subscription"}
+{"checked_at": "2026-07-26T21:31:05Z", "error_excerpt": null, "http_status": 200, "model": "minimax-m2.5:cloud", "status": "free"}
+{"checked_at": "2026-07-26T21:31:09Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "minimax-m2.7:cloud", "status": "requires_subscription"}
+{"checked_at": "2026-07-26T21:31:13Z", "error_excerpt": null, "http_status": 200, "model": "minimax-m3:cloud", "status": "free"}
+{"checked_at": "2026-07-26T21:31:17Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "mistral-large-3:675b-cloud", "status": "retired"}
+{"checked_at": "2026-07-26T21:31:20Z", "error_excerpt": null, "http_status": 200, "model": "nemotron-3-nano:30b-cloud", "status": "retired"}
+{"checked_at": "2026-07-26T21:31:24Z", "error_excerpt": null, "http_status": 200, "model": "nemotron-3-super:cloud", "status": "free"}
+{"checked_at": "2026-07-26T21:31:43Z", "error_excerpt": null, "http_status": 200, "model": "nemotron-3-ultra:cloud", "status": "free"}
+{"checked_at": "2026-07-26T21:31:46Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "qwen3.5:397b-cloud", "status": "retired"}
+{"checked_at": "2026-07-26T21:31:50Z", "error_excerpt": "this model requires a subscription, upgrade for access:", "http_status": 403, "model": "qwen3.5:cloud", "status": "retired"}
