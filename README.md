@@ -23,7 +23,7 @@ It answers one question:
 
 ## Models
 <!-- MODELS_TABLE_START -->
-> Last checked: 2026-07-26 16:56 UTC
+> Last checked: 2026-07-26 21:31 UTC
 
 | Model | Free? | Usage |
 |---|:---:|:---:|
@@ -33,12 +33,8 @@ It answers one question:
 | [`gemma3:12b-cloud`](https://ollama.com/library/gemma3:12b-cloud) | ✅ | ▰▱▱▱ |
 | [`gemma3:27b-cloud`](https://ollama.com/library/gemma3:27b-cloud) | ✅ | ▰▰▱▱ |
 | [`gemma3:4b-cloud`](https://ollama.com/library/gemma3:4b-cloud) | ✅ | ▰▱▱▱ |
-| [`gemma4:31b-cloud`](https://ollama.com/library/gemma4:31b-cloud) | ✅ | ▰▱▱▱ |
-| [`gemma4:cloud`](https://ollama.com/library/gemma4:cloud) | ✅ | ▰▱▱▱ |
 | [`glm-4.6:cloud`](https://ollama.com/library/glm-4.6:cloud) | ✅ | ▰▰▰▱ |
 | [`glm-4.7:cloud`](https://ollama.com/library/glm-4.7:cloud) | ✅ | ▰▰▰▱ |
-| [`gpt-oss:120b-cloud`](https://ollama.com/library/gpt-oss:120b-cloud) | ✅ | ▰▰▱▱ |
-| [`gpt-oss:20b-cloud`](https://ollama.com/library/gpt-oss:20b-cloud) | ✅ | ▰▱▱▱ |
 | [`minimax-m2.1:cloud`](https://ollama.com/library/minimax-m2.1:cloud) | ✅ | ▰▰▱▱ |
 | [`minimax-m2.5:cloud`](https://ollama.com/library/minimax-m2.5:cloud) | ✅ | ▰▰▱▱ |
 | [`minimax-m2:cloud`](https://ollama.com/library/minimax-m2:cloud) | ✅ | ▰▰▱▱ |
@@ -46,7 +42,6 @@ It answers one question:
 | [`ministral-3:14b-cloud`](https://ollama.com/library/ministral-3:14b-cloud) | ✅ | ▰▱▱▱ |
 | [`ministral-3:3b-cloud`](https://ollama.com/library/ministral-3:3b-cloud) | ✅ | ▰▱▱▱ |
 | [`ministral-3:8b-cloud`](https://ollama.com/library/ministral-3:8b-cloud) | ✅ | ▰▱▱▱ |
-| [`nemotron-3-nano:30b-cloud`](https://ollama.com/library/nemotron-3-nano:30b-cloud) | ✅ | ▰▱▱▱ |
 | [`nemotron-3-super:cloud`](https://ollama.com/library/nemotron-3-super:cloud) | ✅ | ▰▰▱▱ |
 | [`nemotron-3-ultra:cloud`](https://ollama.com/library/nemotron-3-ultra:cloud) | ✅ | ▰▰▰▱ |
 | [`qwen3-coder-next:cloud`](https://ollama.com/library/qwen3-coder-next:cloud) | ✅ | ▰▰▱▱ |
@@ -68,10 +63,15 @@ It answers one question:
 | [`kimi-k2.7-code:cloud`](https://ollama.com/library/kimi-k2.7-code:cloud) | 🔒 | ▰▰▰▱ |
 | [`kimi-k2:1t-cloud`](https://ollama.com/library/kimi-k2:1t-cloud) | 🔒 | ▰▰▰▱ |
 | [`minimax-m2.7:cloud`](https://ollama.com/library/minimax-m2.7:cloud) | 🔒 | ▰▰▱▱ |
-| [`mistral-large-3:675b-cloud`](https://ollama.com/library/mistral-large-3:675b-cloud) | 🔒 | ▰▰▱▱ |
-| [`qwen3.5:397b-cloud`](https://ollama.com/library/qwen3.5:397b-cloud) | 🔒 | ▰▰▱▱ |
-| [`qwen3.5:cloud`](https://ollama.com/library/qwen3.5:cloud) | 🔒 | ▰▰▱▱ |
 | [`gemini-3-flash-preview:cloud`](https://ollama.com/library/gemini-3-flash-preview:cloud) | 🚫 | ▰▰▰▰ |
+| [`gemma4:31b-cloud`](https://ollama.com/library/gemma4:31b-cloud) | 🚫 | ▰▱▱▱ |
+| [`gemma4:cloud`](https://ollama.com/library/gemma4:cloud) | 🚫 | ▰▱▱▱ |
+| [`gpt-oss:120b-cloud`](https://ollama.com/library/gpt-oss:120b-cloud) | 🚫 | ▰▰▱▱ |
+| [`gpt-oss:20b-cloud`](https://ollama.com/library/gpt-oss:20b-cloud) | 🚫 | ▰▱▱▱ |
+| [`mistral-large-3:675b-cloud`](https://ollama.com/library/mistral-large-3:675b-cloud) | 🚫 | ▰▰▱▱ |
+| [`nemotron-3-nano:30b-cloud`](https://ollama.com/library/nemotron-3-nano:30b-cloud) | 🚫 | ▰▱▱▱ |
+| [`qwen3.5:397b-cloud`](https://ollama.com/library/qwen3.5:397b-cloud) | 🚫 | ▰▰▱▱ |
+| [`qwen3.5:cloud`](https://ollama.com/library/qwen3.5:cloud) | 🚫 | ▰▰▱▱ |
 <!-- MODELS_TABLE_END -->
 
 ## Methodology
